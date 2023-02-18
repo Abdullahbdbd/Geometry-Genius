@@ -103,3 +103,41 @@ document.getElementById('btn-third').addEventListener('click', function () {
     `
     tableContainer.appendChild(tr);
 })
+
+
+
+// Rhombus
+
+
+document.getElementById('btn-fourth').addEventListener('click', function () {
+
+
+    const fourthInput = document.getElementById('fourth-input')
+    const fourthInputNumString = fourthInput.value;
+    const fourthInputNum = parseFloat(fourthInputNumString);
+
+    const fourthInput2 = document.getElementById('fourth-input2')
+    const fourthInput2NumString = fourthInput2.value;
+    const fourthInput2Num = parseFloat(fourthInput2NumString);
+
+    const totalInputNum = 0.5 * fourthInputNum * fourthInput2Num;
+    const totalInputNumFixed = totalInputNum.toFixed(2);
+    fourthInput.value = '';
+    fourthInput2.value = '';
+
+
+
+    const tableContainer = document.getElementById('table-container')
+    const tr = document.createElement('tr')
+    tr.innerHTML = `
+    
+    <td>${1}</td>
+    <td>${'Rhombus'}</td>
+    <td>${totalInputNumFixed}cm<sup>2</sup></td>
+    <button class="btn btn-sm mt-3 bg-blue-500">Covert to m2</button>
+    `
+    tableContainer.appendChild(tr);
+})
+
+
+
