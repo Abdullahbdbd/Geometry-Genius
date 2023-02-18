@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5th Assignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <header class="lg:px-12">
+        <div class="navbar bg-cyan-50 mt-8 rounded-md">
+            <div class="flex-1 block">
+             <h1 class="text-3xl font-bold">Interactive</h1>
+            
+             <p>Geometry Genius</p>
+            </div>
+            <div class="flex-none">
+                <button class="btn btn-primary">Button</button>
+            </div>
+          </div>
+    </header>
+
+    <main>
+        <section class="lg:px-12 flex flex-col lg:flex-row gap-5">
+            <div class="main-container grid grid-cols lg:grid-cols-3 grid-rows-3 gap-5 w-[75%] mt-8 ">
+                   
+
+                
+                <!-- Triangle -->
+
+
+                <div class="card w-full bg-base-100 shadow-2xl ">
+                    <figure class="px-10 pt-10">
+                      <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title font-bold">Triangle</h2>
+                      <p id="first-title">Area (A) = 0.5 * b * h </p>
+                      
+                     <div>
+                        <input class="bg-slate-200 w-16" type="text" id="first-input" placeholder="b"> cm
+                        <input class="bg-slate-200 w-16" type="text" id="first-input2" placeholder="h"> cm
+                     </div>
+                      
+                      <div class="card-actions mt-8">
+                        <button id="btn-first" class="btn btn-wide bg-sky-500">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                 
+
+
+
+            <div>
+                <div class="result-container text-2xl text-center font-bold w-full md: mt-8 shadow-2xl h-[35%] rounded-md text-base">
+                    <h1 class="underline">Area Calculation</h1>
+                    
+                    <div class="overflow-x-auto mt-8">
+                        <table class="table w-full">
+                          <!-- head -->
+                          <thead>
+                            <tr>
+                              <th>No</th>
+                              <th>Name</th>
+                              <th>result</th>
+                              <th>button</th>
+                            </tr>
+                          </thead>
+                          <tbody id="table-container">
+                            <!-- row 1 -->
+                            <!-- <tr>
+                              <th>1</th>
+                              <td>Cy Ganderton</td>
+                              <td>Quality Control Specialist</td>
+                              <td>Blue</td>
+                            </tr> -->
+                            
+                           
+                          </tbody>
+                        </table>
+                      </div>
+                </div>
+    
+            </div>
+        </section>
+    </main>
+
+
+
+ <!-- js file -->
+
+    <script src="./index.js"></script>
+</body>
+</html>
