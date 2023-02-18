@@ -4,18 +4,30 @@
 document.getElementById('btn-blog').addEventListener('click', function(){
     window.location.href = 'blog.html';
 })
+//-------------------------------------------
 
-
-
-
-
+function randomColor() {
+    let color = [];
+    for (let i = 0; i < 3; i++) {
+      color.push(Math.floor(Math.random() * 256));
+    }
+    return 'rgb(' + color.join(', ') + ')';
+  } 
+  
+  document.addEventListener("mouseover", function(){
+    document.body.style.backgroundColor = randomColor();
+  });
+  
+ 
+//---------------------------------------
 // Triangle
 
 
-
+let sirial = 0
 document.getElementById('btn-first').addEventListener('click', function () {
-
-
+      
+    
+sirial +=1;
     const firstInput = document.getElementById('first-input')
     const firstInputNumString = firstInput.value;
     const firstInputNum = parseFloat(firstInputNumString);
@@ -30,12 +42,11 @@ document.getElementById('btn-first').addEventListener('click', function () {
     firstInput2.value = '';
 
 
-
     const tableContainer = document.getElementById('table-container')
     const tr = document.createElement('tr')
     tr.innerHTML = `
     
-    <td>${1}</td>
+    <td>${sirial}</td>
     <td>${'Triangle'}</td>
     <td>${totalInputNumFixed}cm<sup>2</sup></td>
     <button class="btn btn-sm mt-3 bg-blue-500">Covert to m2</button>
@@ -44,13 +55,12 @@ document.getElementById('btn-first').addEventListener('click', function () {
 })
 
 
-
 // Rectangle
 
 
 document.getElementById('btn-second').addEventListener('click', function () {
 
-
+    sirial +=1;
     const secondInput = document.getElementById('second-input')
     const secondInputNumString = secondInput.value;
     const secondInputNum = parseFloat(secondInputNumString);
@@ -70,7 +80,7 @@ document.getElementById('btn-second').addEventListener('click', function () {
     const tr = document.createElement('tr')
     tr.innerHTML = `
     
-    <td>${1}</td>
+    <td>${sirial}</td>
     <td>${'Rectangle'}</td>
     <td>${totalInputNumFixed}cm<sup>2</sup></td>
     <button class="btn btn-sm mt-3 bg-blue-500">Covert to m2</button>
@@ -85,7 +95,7 @@ document.getElementById('btn-second').addEventListener('click', function () {
 
 
 document.getElementById('btn-third').addEventListener('click', function () {
-
+    sirial +=1;
 
     const thirdInput = document.getElementById('third-input')
     const thirdInputNumString = thirdInput.value;
@@ -106,7 +116,7 @@ document.getElementById('btn-third').addEventListener('click', function () {
     const tr = document.createElement('tr')
     tr.innerHTML = `
     
-    <td>${1}</td>
+    <td>${sirial}</td>
     <td>${'Parallelogram'}</td>
     <td>${totalInputNumFixed}cm<sup>2</sup></td>
     <button class="btn btn-sm mt-3 bg-blue-500">Covert to m2</button>
@@ -120,7 +130,7 @@ document.getElementById('btn-third').addEventListener('click', function () {
 
 
 document.getElementById('btn-fourth').addEventListener('click', function () {
-
+    sirial +=1;
 
     const fourthInput = document.getElementById('fourth-input')
     const fourthInputNumString = fourthInput.value;
@@ -141,7 +151,7 @@ document.getElementById('btn-fourth').addEventListener('click', function () {
     const tr = document.createElement('tr')
     tr.innerHTML = `
     
-    <td>${1}</td>
+    <td>${sirial}</td>
     <td>${'Rhombus'}</td>
     <td>${totalInputNumFixed}cm<sup>2</sup></td>
     <button class="btn btn-sm mt-3 bg-blue-500">Covert to m2</button>
@@ -154,7 +164,7 @@ document.getElementById('btn-fourth').addEventListener('click', function () {
 
 
 document.getElementById('btn-fifth').addEventListener('click', function () {
-
+    sirial +=1;
 
     const fifthInput = document.getElementById('fifth-input')
     const fifthInputNumString = fifthInput.value;
@@ -175,7 +185,7 @@ document.getElementById('btn-fifth').addEventListener('click', function () {
     const tr = document.createElement('tr')
     tr.innerHTML = `
     
-    <td>${1}</td>
+    <td>${sirial}</td>
     <td>${'Pentagon'}</td>
     <td>${totalInputNumFixed}cm<sup>2</sup></td>
     <button class="btn btn-sm mt-3 bg-blue-500">Covert to m2</button>
@@ -189,7 +199,7 @@ document.getElementById('btn-fifth').addEventListener('click', function () {
 
 
 document.getElementById('btn-sixth').addEventListener('click', function () {
-
+    sirial +=1;
 
     const sixthInput = document.getElementById('sixth-input')
     const sixthInputNumString = sixthInput.value;
@@ -210,7 +220,7 @@ document.getElementById('btn-sixth').addEventListener('click', function () {
     const tr = document.createElement('tr')
     tr.innerHTML = `
     
-    <td>${1}</td>
+    <td>${sirial}</td>
     <td>${'Ellipse'}</td>
     <td>${totalInputNumFixed}cm<sup>2</sup></td>
     <button class="btn btn-sm mt-3 bg-blue-500">Covert to m2</button>
