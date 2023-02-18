@@ -140,4 +140,36 @@ document.getElementById('btn-fourth').addEventListener('click', function () {
 })
 
 
+// Pentagon
+
+
+document.getElementById('btn-fifth').addEventListener('click', function () {
+
+
+    const fifthInput = document.getElementById('fifth-input')
+    const fifthInputNumString = fifthInput.value;
+    const fifthInputNum = parseFloat(fifthInputNumString);
+
+    const fifthInput2 = document.getElementById('fifth-input2')
+    const fifthInput2NumString = fifthInput2.value;
+    const fifthInput2Num = parseFloat(fifthInput2NumString);
+
+    const totalInputNum = 0.5 * fifthInputNum * fifthInput2Num;
+    const totalInputNumFixed = totalInputNum.toFixed(2);
+    fifthInput.value = '';
+    fifthInput2.value = '';
+
+
+
+    const tableContainer = document.getElementById('table-container')
+    const tr = document.createElement('tr')
+    tr.innerHTML = `
+    
+    <td>${1}</td>
+    <td>${'Pentagon'}</td>
+    <td>${totalInputNumFixed}cm<sup>2</sup></td>
+    <button class="btn btn-sm mt-3 bg-blue-500">Covert to m2</button>
+    `
+    tableContainer.appendChild(tr);
+})
 
