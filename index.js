@@ -173,3 +173,37 @@ document.getElementById('btn-fifth').addEventListener('click', function () {
     tableContainer.appendChild(tr);
 })
 
+
+
+// Ellipse
+
+
+document.getElementById('btn-sixth').addEventListener('click', function () {
+
+
+    const sixthInput = document.getElementById('sixth-input')
+    const sixthInputNumString = sixthInput.value;
+    const sixthInputNum = parseFloat(sixthInputNumString);
+
+    const sixthInput2 = document.getElementById('sixth-input2')
+    const sixthInput2NumString = sixthInput2.value;
+    const sixthInput2Num = parseFloat(sixthInput2NumString);
+
+    const totalInputNum = 3.14 * sixthInputNum * sixthInput2Num;
+    const totalInputNumFixed = totalInputNum.toFixed(2);
+    sixthInput.value = '';
+    sixthInput2.value = '';
+
+
+
+    const tableContainer = document.getElementById('table-container')
+    const tr = document.createElement('tr')
+    tr.innerHTML = `
+    
+    <td>${1}</td>
+    <td>${'Ellipse'}</td>
+    <td>${totalInputNumFixed}cm<sup>2</sup></td>
+    <button class="btn btn-sm mt-3 bg-blue-500">Covert to m2</button>
+    `
+    tableContainer.appendChild(tr);
+})
