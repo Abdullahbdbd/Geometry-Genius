@@ -9,17 +9,17 @@ document.getElementById('btn-blog').addEventListener('click', function(){
 // Hover
 
 
-function randomColor() {
-    let color = [];
-    for (let i = 0; i < 3; i++) {
-      color.push(Math.floor(Math.random() * 2000));
-    }
-    return 'rgb(' + color.join(', ') + ')';
-  } 
+// function randomColor() {
+//     let color = [];
+//     for (let i = 0; i < 3; i++) {
+//       color.push(Math.floor(Math.random() * 2000));
+//     }
+//     return 'rgb(' + color.join(', ') + ')';
+//   } 
   
-  document.addEventListener("mouseover", function(){
-    document.body.style.backgroundColor = randomColor();
-  });
+//   document.addEventListener("mouseover", function(){
+//     document.body.style.backgroundColor = randomColor();
+//   });
   
 
 
